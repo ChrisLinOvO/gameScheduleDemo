@@ -1,0 +1,52 @@
+.dateItem {
+  position: relative;
+  width: 200px;
+  font-size: 20px;
+  background: #2f3140;
+  margin: 0 20px 0 0;
+  color: #ebe9ed;
+  border-radius: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 12px 0;
+}
+.dateItem.choose {
+  background: #381e4e;
+}
+.dateItem .dot {
+  position: absolute;
+  border-radius: 100%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  background: #000;
+  /* transition: all 0.4s linear; */
+}
+.dateItem.choose .dot {
+  background-color: #71279d;
+  width: 15px;
+  height: 15px;
+  left: 10px;
+  animation-name: dotRun;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+@keyframes dotRun {
+  0% {
+    background-color: #71279d;
+    width: 15px;
+    height: 15px;
+    left: 10px;
+  }
+  50% {
+    background-color: #a205fd;
+    width: 18px;
+    height: 18px;
+    left: 7px;
+  }
+  100% {
+    background-color: #71279d;
+    width: 15px;
+    height: 15px;
+    left: 10px;
+  }
+}
