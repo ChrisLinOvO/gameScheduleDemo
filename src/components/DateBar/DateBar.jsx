@@ -50,7 +50,7 @@ const DateBar = ({ propsMenuDate, onDateChange }) => {
     const minLeft = MOVE_ONCE*menuDate.length - window.innerWidth;
     if(minLeft<=0 )return; //scroll elment width < window.width
     // const finalLeft = tMoveDis > minLeft ? minLeft:tMoveDis;
-    console.log(Math.ceil(window.innerWidth/MOVE_ONCE) )
+    // console.log(Math.ceil(window.innerWidth/MOVE_ONCE) )
     if(scrollMover===0 && ctn+1 <= Math.floor(window.innerWidth/MOVE_ONCE))return;//left=0&&click not on hidden one
     if(ctn+1 > Math.floor(window.innerWidth/MOVE_ONCE)){//Click on hidden one
       if(ctn<chooseDateCtn)tMoveDis = scrollMover+MOVE_ONCE;//Hidden one on left side
