@@ -40,6 +40,29 @@ const DateBar = ({ propsMenuDate, onDateChange }) => {
     setScrollMover(tMoveDis);
   }
 
+  function moveCtn(ctn){
+
+    if(ctn<0||ctn>menuDate.length-1||ctn===chooseDateCtn)return;
+    const disCtn = chooseDateCtn - ctn; //target child count - now choosed ctn
+    let tMoveDis = scrollMover + MOVE_ONCE * disCtn;
+    onDateChange(ctn);
+    setChooseDateCtn(ctn);
+    const minLeft = MOVE_ONCE*menuDate.length - window.innerWidth;
+    if(minLeft<=0 )return; //scroll elment width < window.width
+    // const finalLeft = tMoveDis > minLeft ? minLeft:tMoveDis;
+    console.log(Math.ceil(window.innerWidth/MOVE_ONCE) )
+    if(scrollMover===0 && ctn+1 <= Math.floor(window.innerWidth/MOVE_ONCE))return;//left=0&&click not on hidden one
+    if(ctn+1 > Math.floor(window.innerWidth/MOVE_ONCE)){//Click on hidden one
+      if(ctn<chooseDateCtn)tMoveDis = scrollMover+MOVE_ONCE;//Hidden one on left side
+      else {tMoveDis = scrollMover-MOVE_ONCE;}//Hidden one on right side
+    }
+    //if(scrollMover+(MOVE_ONCE*(ctn+1))>window.innerWidth)tMoveDis = scrollMover-MOVE_ONCE;//Click on hidden one over right border
+    if(tMoveDis > 0)tMoveDis = 0;//Child 0 alway move to right
+    inputRef.current.style.left = tMoveDis + "px";
+    setScrollMover(tMoveDis);
+    
+  }
+
   return (
     <div className="scroll-Outer">
       <div
@@ -54,12 +77,16 @@ const DateBar = ({ propsMenuDate, onDateChange }) => {
         onTouchEnd={(v) => {
           judgeScroll(v.changedTouches[0]);
         }}
+       
       >
         {propsMenuDate.map((item, index) => {
           return (
             <div
               className={`dateItem ${index === chooseDateCtn ? "choose" : ""}`}
               key={index + 1}
+              onClick={()=>{
+                moveCtn(index)
+              }}
             >
               <span className="dot"></span>
               {item}

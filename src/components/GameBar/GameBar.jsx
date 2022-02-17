@@ -52,6 +52,8 @@ const GameBar = ({ propsMenuGame }) => {
     setScrollMover(0);
   }
 
+ 
+
   //主客場icon
   function iconStyle(item) {
     if (item === "桃園領航猿") return logo1;
