@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import "./DateBar.css";
+import "./DateBar.scss";
 const DateBar = ({ propsMenuDate, onDateChange }) => {
   const MOVE_ONCE = 220; //滾動移動一次 距離
   const [startPos, setStartPos] = useState([0, 0]); // 起始移動位置
@@ -48,7 +48,7 @@ const DateBar = ({ propsMenuDate, onDateChange }) => {
         onTouchStart={(v) => {
           setStartPos([
             v.changedTouches[0].clientX,
-            v.changedTouches[0].clientY,
+            v.changedTouches[0].clientY
           ]);
         }}
         onTouchEnd={(v) => {

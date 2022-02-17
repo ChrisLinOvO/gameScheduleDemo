@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { menuConfig } from "../../menuConfig";
 import DateBar from "../../components/DateBar";
 import GameBar from "../../components/GameBar";
-import "./Home.css";
+import "./Home.scss";
 const Home = () => {
   const [menuDate, setMenuDate] = useState([]);
   const [menuGame, setMenuGame] = useState([]);
