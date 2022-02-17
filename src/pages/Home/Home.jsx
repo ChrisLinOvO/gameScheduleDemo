@@ -32,7 +32,7 @@ const Home = () => {
   return (
     <div className="home">
       <div className="allow">＜</div>
-      <div className="header">新竹街口攻城獅</div>
+      <div className="header">新竹街口攻城獅厲害</div>
       <div className="title">賽程表</div>
       <div className="text">聯盟戰況</div>
 
