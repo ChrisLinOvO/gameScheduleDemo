@@ -84,13 +84,13 @@ const GameBar = ({ propsMenuGame }) => {
               <p className="location">{item.location}</p>
               <div className="gameTeam">
                 <p className="doFlex">
-                  <img src={iconStyle(item.homeTeam[0])}></img>
+                  <img src={iconStyle(item.homeTeam[0])} alt="icon"></img>
                   <span>{item.homeTeam[0]}</span>
 
                   <span>{item.homeTeam[1]}</span>
                 </p>
                 <p className="doFlex">
-                  <img src={iconStyle(item.guestTeam[0])}></img>
+                  <img src={iconStyle(item.guestTeam[0])} alt="icon"></img>
                   <span>{item.guestTeam[0]}</span>
                   <span>{item.guestTeam[1]}</span>
                 </p>
