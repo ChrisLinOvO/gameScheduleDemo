@@ -1,9 +1,9 @@
 import { useEffect, useState, useRef } from "react";
 import "./GameBar.scss";
-import logo1 from "../../icon/logo1.png";
-import logo2 from "../../icon/logo2.png";
-import logo3 from "../../icon/logo3.png";
-import logo4 from "../../icon/logo4.png";
+import logo1 from "../../img/logo1.png";
+import logo2 from "../../img/logo2.png";
+import logo3 from "../../img/logo3.png";
+import logo4 from "../../img/logo4.png";
 
 const GameBar = ({ propsMenuGame }) => {
   const MOVE_ONCE = 340; //滾動移動一次 距離
