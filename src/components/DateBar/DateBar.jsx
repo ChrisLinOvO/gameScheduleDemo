@@ -31,12 +31,12 @@ const DateBar = ({ propsMenuDate, onDateChange }) => {
     const maxScrollBarX = (menuDate.length - 1) * (MOVE_ONCE + 20) * -1;
     if (tMoveDis < maxScrollBarX) return; //往左已到達最小邊界
 
-    inputRef.current.style.left = tMoveDis + "px";
+    inputRef.current.style.left = tMoveDis + "px"; //改變UI滾動
 
     // 所選到日期
-    const nextCtn = chooseDateCtn + scrollDirection * -1;
-    onDateChange(nextCtn < 0 ? 0 : nextCtn);
-    setChooseDateCtn(nextCtn < 0 ? 0 : nextCtn);
+    const nextCtn = chooseDateCtn + scrollDirection * -1;//日期點到第幾項
+    onDateChange(nextCtn < 0 ? 0 : nextCtn);//傳父層改變比賽資料
+    setChooseDateCtn(nextCtn < 0 ? 0 : nextCtn);//選到第幾月
     setScrollMover(tMoveDis);
   }
 
@@ -68,13 +68,13 @@ const DateBar = ({ propsMenuDate, onDateChange }) => {
       <div
         ref={inputRef}
         className="scroll-Mover"
-        onTouchStart={(v) => {
+        onTouchStart={(v) => {//紀錄滑動事件起點
           setStartPos([
             v.changedTouches[0].clientX,
             v.changedTouches[0].clientY
           ]);
         }}
-        onTouchEnd={(v) => {
+        onTouchEnd={(v) => {//紀錄滑動事件終點，傳入function
           judgeScroll(v.changedTouches[0]);
         }}
        
