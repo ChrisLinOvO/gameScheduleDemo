@@ -56,7 +56,7 @@ const DateBar = ({ propsMenuDate, onDateChange }) => {
       if(ctn<chooseDateCtn)tMoveDis = scrollMover+MOVE_ONCE;//Hidden one on left side
       else {tMoveDis = scrollMover-MOVE_ONCE;}//Hidden one on right side
     }
-    //if(scrollMover+(MOVE_ONCE*(ctn+1))>window.innerWidth)tMoveDis = scrollMover-MOVE_ONCE;//Click on hidden one over right border
+    if(scrollMover+(MOVE_ONCE*(ctn+1))>window.innerWidth)tMoveDis = scrollMover-MOVE_ONCE;//Click on hidden one over right border
     if(tMoveDis > 0)tMoveDis = 0;//Child 0 alway move to right
     inputRef.current.style.left = tMoveDis + "px";
     setScrollMover(tMoveDis);

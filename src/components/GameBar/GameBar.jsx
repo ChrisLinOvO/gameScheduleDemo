@@ -12,6 +12,7 @@ const GameBar = ({ propsMenuGame }) => {
   const [chooseDateCtn, setChooseDateCtn] = useState(0);
   const [menuGame, setMenuGame] = useState([]); // 日期Render GameBar
   const inputRef = useRef();
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   useEffect(() => {
     clearScrollBarCtn();
     setMenuGame(propsMenuGame || []);
@@ -62,7 +63,7 @@ const GameBar = ({ propsMenuGame }) => {
     if (item === "臺北富邦勇士") return logo4;
   }
   return (
-    <div className="scroll-Outer gameDiv">
+    <div className={`scroll-Outer gameDiv ${isMobile ? "" : "showScrollBar"}`}>
       <div
         ref={inputRef}
         className="scroll-Mover"

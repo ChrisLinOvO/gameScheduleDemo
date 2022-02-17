@@ -4,6 +4,7 @@
   vertical-align: middle;
   .headerBox{
    height: 150px;
+
     .header {
       position: absolute;
       color: #ffffff;
@@ -24,14 +25,24 @@
       color: #ffffff;
       left: 20px;
       top: 100px;
-      font-size: 20px;
+      font-size: 35px;
     }
     .text {
       position: absolute;
       color: #ffffff;
-      right: 20px;
-      top: 100px;
-      font-size: 20px;
+      right: 60px;
+      top: 110px;
+      font-size: 25px;
+      align-items: center;
+      .textAllow{
+        position: absolute;
+        top: 4px;
+         right: -35px;
+         width: 30px;
+         height: 30px;
+        border-radius: 50%;
+        background-color: #2f3140;
+      }
     } 
     
   }

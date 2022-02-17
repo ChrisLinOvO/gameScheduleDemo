@@ -35,7 +35,7 @@ const Home = () => {
       <div className="allow">＜</div>
       <div className="header">新竹街口攻城獅</div>
       <div className="title">賽程表</div>
-      <div className="text">聯盟戰況</div>
+      <div className="text">聯盟戰況 <div className="textAllow">{">"}</div></div>
       </div>
     
 

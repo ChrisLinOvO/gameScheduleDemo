@@ -2,6 +2,26 @@
   height: 340px;
 }
 
+.scroll-Outer.showScrollBar {
+  overflow-x: auto;
+  height: 340px;
+}
+.scroll-Outer.showScrollBar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.scroll-Outer.showScrollBar::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5;
+}
+
+.scroll-Outer.showScrollBar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #302352;
+}
 .gameItem {
   position: relative;
   width: 320px;
