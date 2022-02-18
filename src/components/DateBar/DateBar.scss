@@ -1,3 +1,4 @@
+$sec:3s;
 .dateItem {
   position: relative;
   width: 200px;
@@ -26,9 +27,8 @@
   width: 15px;
   height: 15px;
   left: 10px;
-  animation-name: dotRun;
-  animation-duration: 2s;
-  animation-timing-function: linear;
+ 
+  animation: dotRun $sec linear infinite ;
 }
 @keyframes dotRun {
   0% {
@@ -39,9 +39,9 @@
   }
   50% {
     background-color: #a205fd;
-    width: 18px;
-    height: 18px;
-    left: 7px;
+    width: 15px;
+    height: 15px;
+    left: 10px;
   }
   100% {
     background-color: #71279d;
